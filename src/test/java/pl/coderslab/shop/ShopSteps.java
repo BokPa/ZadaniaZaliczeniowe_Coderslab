@@ -31,6 +31,7 @@ public class ShopSteps {
         driver.manage().window().maximize();
         AuthenticationPage authenticationPage = new AuthenticationPage(driver);
         authenticationPage.putAllNeededCredentials(email);
+        driver.findElement(By.className("logout")).click();
     }
 
     @And("shops authentication page is displayed")
